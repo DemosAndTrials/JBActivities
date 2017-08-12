@@ -9,8 +9,8 @@
    "type": "REST",
    "lang": {
        "en-US": {
-           "name": "Custom JB Activity",
-           "description": "Custom JB Activity"
+           "name": "{{ACTIVITY_NAME}}",
+           "description": "{{ACTIVITY_DESCRIPTION}}"
        }
    },
    "arguments": {
@@ -28,19 +28,19 @@
    "configurationArguments": {
        "applicationExtensionKey": "0f3b0ca3-3643-44d0-bedd-6750563a63d4",
        "save": {
-           "url": "https://ros-mc-ca.herokuapp.com/save"
+           "url": "https://{{ENDPOINT_NAME}}.herokuapp.com/save"
        },
        "publish": {
-           "url": "https://ros-mc-ca.herokuapp.com/publish"
+           "url": "https://{{ENDPOINT_NAME}}.herokuapp.com/publish"
        },
        "validate": {
-           "url": "https://ros-mc-ca.herokuapp.com/validate"
+           "url": "https://{{ENDPOINT_NAME}}.herokuapp.com/validate"
        }
    },
-    "wizardSteps": "1",   
+    "wizardSteps": "{{WIZARD_STEPS}}",   
    "edit": {
-		"url": "https://ros-mc-ca.herokuapp.com/ixn/activities/generic-activity/index.html",
-		"height": "600",
-		"width": "800"
+		"url": "https://{{HEROKU_APP_NAME}}.herokuapp.com/ixn/activities/generic-activity/index.html",
+		"height": "{{EDIT_HEIGHT}}",
+		"width": "{{EDIT_WIDTH}}"
 	}
 }
