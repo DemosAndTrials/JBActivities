@@ -16,7 +16,7 @@
    "arguments": {
         "execute": {
             "inArguments": [],               
-            "url": "{{EXECUTE_ENDPOINT_URL}}",
+            "url": "https://ros-mc-ca.herokuapp.com/ixn/activities/generic-activity",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -26,7 +26,7 @@
        }
    },
    "configurationArguments": {
-       "applicationExtensionKey": "{{KEY}}",
+       "applicationExtensionKey": "0f3b0ca3-3643-44d0-bedd-6750563a63d4",
        "save": {
            "url": "https://ros-mc-ca.herokuapp.com/save"
        },
