@@ -53,6 +53,7 @@ define(['postmonger'], function(Postmonger) {
 	connection.on('initActivity', function(payload) {
         if (payload) {
         	inArgPayload = payload;
+			console.log('*** ROS ***');
             console.log('payload',JSON.stringify(payload));
 
 			var jsonPayload = payload['arguments'].execute.inArguments;
