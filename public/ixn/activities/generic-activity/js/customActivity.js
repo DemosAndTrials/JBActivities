@@ -17,6 +17,7 @@ define(['postmonger'], function(Postmonger) {
     // get the # of steps
 	var numSteps = getUrlParameter('numSteps');
 	// do some error checking on the inbound num steps
+	console.log('*** numSteps ***', numSteps);
 
     $(window).ready(function() {
         connection.trigger('ready');
@@ -48,6 +49,7 @@ define(['postmonger'], function(Postmonger) {
 		} else {
 			tokens = data;
 		}
+		console.log('*** getTokens ***', data);
 	});
 	
 	connection.on('initActivity', function(payload) {
@@ -131,7 +133,7 @@ define(['postmonger'], function(Postmonger) {
 
 	connection.on('updateStep', function( data ) {
 		// Called if the configuration flow needs to change
-
+		console.log('*** updateStep ***', data);
 	});
 
 	// This listens for Journey Builder to send endpoints
@@ -143,6 +145,7 @@ define(['postmonger'], function(Postmonger) {
 		} else {
 			endpoints = data;
 		}
+		console.log('*** getEndpoints ***', data);
 	});
 
     connection.on('requestPayload', function() {
@@ -156,6 +159,7 @@ define(['postmonger'], function(Postmonger) {
         payload.flowDisplayName = 'Custom Activity';
  
         connection.trigger('getPayload', payload);
+		console.log('*** requestPayload ***', payload);
     });
 
 	// Journey Builder broadcasts this event to us after this module
@@ -163,6 +167,7 @@ define(['postmonger'], function(Postmonger) {
 	// consists of the Event Data and passes it to the
 	// "config.js.save.uri" as a POST
     connection.on('populateFields', function(payload) {
+		console.log('*** populateFields ***', payload);
     });
 	
 	function getUrlParameter(name) {
