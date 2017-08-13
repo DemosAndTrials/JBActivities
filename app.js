@@ -129,7 +129,7 @@ app.get( '/ixn/activities/generic-activity/config.json', function( req, res ) {
 
     var stepSearch = new RegExp('{{' + wizardSteps + '}}', 'g');    
     json.wizardSteps = JSON.parse(configjson.wizardSteps.replace(stepSearch, JSON.stringify(jsonSteps)));
-        
+    console.log("JSON: " + json);   
     res.status(200).send( json );
 });
 
