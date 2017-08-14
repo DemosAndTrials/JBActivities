@@ -7,7 +7,7 @@ requirejs.config({
 define(['postmonger'], function(Postmonger) {
     'use strict';
 
-    console.log('***' + window.location.hostname + '***');
+    console.log('***' + window.location.href  + '***');
     var connection = new Postmonger.Session();
 
     var tokens;
